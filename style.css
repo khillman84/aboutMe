@@ -1,0 +1,19 @@
+h1 {
+  font-family: helvetica;
+}
+
+p {
+  color: lightgrey;
+}
+
+p#somethingElse {
+  background-color: purple;
+}
+
+.moreContent {
+  background-color: #0000FF;
+}
+
+#somethingElse {
+  border: 5px dashed #FF0000;
+}
