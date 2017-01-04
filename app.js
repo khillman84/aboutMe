@@ -10,15 +10,17 @@ var questions = [
   ['Do I have two daughters?', 'yes', 'y', ' I have two daughters!'],
   ['Do I like Code 201?', 'yes', 'y', ' This class has been awesome!'],
 ];
-/*
+
 //for loop to cycle through the questions in the array
 for (var i = 0; i < questions.length; i++){
   var answer = prompt(questions[i][0]);
   if (answer.toLowerCase() === questions[i][1] || answer.toLowerCase() === questions[i][2]) {
     console.log(questions[i][0] + ' ' + answer);
     alert('Correct!' + questions[i][3]);
+    document.write('<p class="answerBox">' + questions[i][0] + ' Correct! ' + questions[i][3]);
   } else {
     console.log(questions[i][0] + ' ' + answer);
     alert('That is incorrect');
+    document.write('<p class="answerBox">' + questions[i][0] + ' Wrong!' + questions[i][3]);
   }
 }
