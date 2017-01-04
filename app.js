@@ -2,12 +2,12 @@
 
 var start = confirm('My name is Kyle and I am going to ask you a few questions about me.  Please answer with YES/NO or Y/N.  Are you ready?');
 
-//The questions I want to ask are arranged in this loop
+//The questions I want to ask are arranged in this array
 var questions = [
   ['Do I live in Olympia?', 'yes', 'y', ' I have lived there for 3 years.'],
   ['Do I own a pet?', 'yes', 'y', ' I own 1 cat.'],
   ['Do I play the banjo?', 'no', 'n', ' I play guitar, but not the banjo.'],
-  ['Do I have two daughters?', 'yes', 'y', ' I have two daughters!'],
+  ['Do I have any children?', 'yes', 'y', ' I have two daughters!'],
   ['Do I like Code 201?', 'yes', 'y', ' This class has been awesome!'],
 ];
 
