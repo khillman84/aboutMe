@@ -35,6 +35,6 @@ body {
   width: 50%;
 }
 
-p {
+p, li {
   color: lightgrey;
 }
