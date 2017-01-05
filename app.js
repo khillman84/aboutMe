@@ -49,7 +49,6 @@ if (turns === 0){
   document.write('<p class="answerBox">' + 'Wrong! The answer was ' + randomNumber);
 }
 
-
 //Seventh question about what states I have lived in with six chances to guess
 var homes = ['kansas', 'alaska'];
 var placesTurns = 6;
@@ -73,6 +72,7 @@ if (placesTurns === 0){
   document.write('<p class="answerBox">' + 'Wrong! The answer was Kansas or Alaska' );
 }
 
+//Final alert and score
 alert('Congratulations ' + start + '! You got ' + point + ' questions correct out of 7!');
 document.write('<p class="answerBox">' + 'Congratulations ' + start + '! You got ' + point + ' questions correct out of 7!');
 console.log('You got ' + point + ' questions correct out of 7!');
