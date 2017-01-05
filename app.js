@@ -12,9 +12,13 @@ var questions = [
   ['Do I like Code 201?', 'yes', 'y', ' This class has been awesome!'],
 ];
 
+function askQuestions() {
+  return prompt(questions[i][0]);
+}
+
 //for loop to cycle through the questions in the array
 for (var i = 0; i < questions.length; i++){
-  var answer = prompt(questions[i][0]);
+  var answer = askQuestions();
   if (answer.toLowerCase() === questions[i][1] || answer.toLowerCase() === questions[i][2]) {
     console.log(questions[i][0] + ' ' + answer);
     alert('Correct!' + questions[i][3]);
