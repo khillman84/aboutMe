@@ -18,12 +18,12 @@ for (var i = 0; i < questions.length; i++){
   if (answer.toLowerCase() === questions[i][1] || answer.toLowerCase() === questions[i][2]) {
     console.log(questions[i][0] + ' ' + answer);
     alert('Correct!' + questions[i][3]);
-    document.write('<p class="answerBox">' + questions[i][0] + ' Correct! ' + questions[i][3]);
+    document.write('<p class="answerBox">' + questions[i][0] + ' Correct! ' + questions[i][3] + '</p>');
     point = point + 1;
   } else {
     console.log(questions[i][0] + ' ' + answer);
     alert('That is incorrect');
-    document.write('<p class="answerBox">' + questions[i][0] + ' Wrong!' + questions[i][3]);
+    document.write('<p class="answerBox">' + questions[i][0] + ' Wrong!' + questions[i][3] + '</p>');
   }
 }
 
@@ -35,7 +35,7 @@ while (turns > 0){
   var guessNumber = prompt('I am thinking of a number between 1 and 9. What is it? ' + turns + ' guesses left.');
   if (parseInt(guessNumber) === randomNumber) {
     console.log('Correct! The answer was ' + randomNumber);
-    document.write('<p class="answerBox">' + 'Correct! The answer was ' + randomNumber);
+    document.write('<p class="answerBox">' + 'Correct! The answer was ' + randomNumber + '</p>');
     point = point + 1;
     turns = 0;
   } else {
@@ -46,7 +46,7 @@ while (turns > 0){
 
 if (turns === 0){
   alert('The number was ' + randomNumber + '.');
-  document.write('<p class="answerBox">' + 'Wrong! The answer was ' + randomNumber);
+  document.write('<p class="answerBox">' + 'Wrong! The answer was ' + randomNumber + '</p>');
 }
 
 //Seventh question about what states I have lived in with six chances to guess
@@ -57,7 +57,7 @@ while (placesTurns > 0){
   var guessHome = prompt('I have lived in states other than Washington. Can you guess which ones? ' + placesTurns + ' guesses left.');
   if (guessHome.toLowerCase() === homes[0] || guessHome.toLowerCase() === homes[1]){
     console.log('Correct! I have lived in ' + guessHome);
-    document.write('<p class="answerBox">' + 'Correct! The answer was ' + guessHome);
+    document.write('<p class="answerBox">' + 'Correct! The answer was ' + guessHome + '</p>');
     // placesTurns = 0;
     point = point + 1;
     break;
@@ -69,10 +69,10 @@ while (placesTurns > 0){
 
 if (placesTurns === 0){
   alert('The correct answers were Kansas or Alaska');
-  document.write('<p class="answerBox">' + 'Wrong! The answer was Kansas or Alaska' );
+  document.write('<p class="answerBox">' + 'Wrong! The answer was Kansas or Alaska' + '</p>');
 }
 
 //Final alert and score
 alert('Congratulations ' + start + '! You got ' + point + ' questions correct out of 7!');
-document.write('<p class="answerBox">' + 'Congratulations ' + start + '! You got ' + point + ' questions correct out of 7!');
+document.write('<p class="answerBox">' + 'Congratulations ' + start + '! You got ' + point + ' questions correct out of 7!' + '</p>');
 console.log('You got ' + point + ' questions correct out of 7!');
