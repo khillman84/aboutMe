@@ -1,6 +1,6 @@
 'use strict';
 
-var start = confirm('My name is Kyle and I am going to ask you a few questions about me.  Please answer with YES/NO or Y/N.  Are you ready?');
+var start = prompt('Ok, let\'s get started! Please enter your name.');
 
 //The questions I want to ask are arranged in this array
 var questions = [
@@ -22,5 +22,39 @@ for (var i = 0; i < questions.length; i++){
     console.log(questions[i][0] + ' ' + answer);
     alert('That is incorrect');
     document.write('<p class="answerBox">' + questions[i][0] + ' Wrong!' + questions[i][3]);
+  }
+}
+
+//Sixth question to guess random number with four chances to guess
+var randomNumber = Math.floor(Math.random() * 9) + 1;
+var turns = 4;
+
+while (turns > 0){
+  var guessNumber = prompt('I am thinking of a number between 1 and 9. What is it? ' + turns + ' guesses left.');
+  if (parseInt(guessNumber) === randomNumber) {
+    console.log('Correct! The answer was ' + randomNumber);
+    document.write('<p class="answerBox">' + 'Correct! The answer was ' + randomNumber);
+    turns = 0;
+  } else {
+    guessNumber = 'Wrong.';
+    console.log('Wrong! The answer was ' + randomNumber);
+    turns = turns - 1;
+  }
+}
+alert('The number was ' + randomNumber + '.');
+
+//Seventh question about what states I have lived in with six chances to guess
+var homes = ['kansas', 'alaska'];
+var placesTurns = 6;
+
+while (placesTurns > 0){
+  var guessHome = prompt('I have lived in states other than Washington. Can you guess which ones? ' + placesTurns + ' guesses left.');
+  if (guessHome.toLowerCase() === homes[0] || guessHome.toLowerCase() === homes[1]){
+    console.log('Correct! I have lived in ' + guessHome);
+    document.write('<p class="answerBox">' + 'Correct! The answer was ' + guessHome);
+    placesTurns = 0;
+  } else {
+    console.log('Wrong! I have not lived in ' + guessHome);
+    placesTurns = placesTurns - 1;
   }
 }
